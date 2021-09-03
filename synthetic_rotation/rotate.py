@@ -27,8 +27,8 @@ H = cv.getPerspectiveTransform(srcpts, dstpts, solveMethod=cv.DECOMP_LU)
 
 new_img = cv.warpPerspective(img, H, (1600, 1200))
 
-
-cv.namedWindow('img', cv.WINDOW_NORMAL)
-cv.imshow('img', new_img)
-cv.waitKey(0)
-cv.destroyAllWindows()
+cv.imwrite("result.jpg", new_img)
+#cv.namedWindow('img', cv.WINDOW_NORMAL)
+#cv.imshow('img', new_img)
+#cv.waitKey(0)
+#cv.destroyAllWindows()
